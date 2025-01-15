@@ -28,3 +28,39 @@ let package = Package(
           ),
       ]
 )
+
+
+
+//import PackageDescription
+//let package = Package(
+//    name: "FrameworkC",
+//    platforms: [
+//        .iOS(.v13)
+//    ],
+//    products: [
+//        .library(
+//            name: "FrameworkC",
+//            targets: ["FrameworkCTargets"]
+//        )
+//    ],
+//    targets: [
+//        .binaryTarget(
+//            name: "FrameworkC",
+//            url: "url-to-framework-c",
+//            checksum: "checksum"
+//        ),
+//        .binaryTarget(
+//            name: "FrameworkA",
+//            url: "url-to-framework-a",
+//            checksum: "checksum"
+//        ),
+//        .target(name: "FrameworkCTargets",
+//                dependencies: [
+//                    .target(name: "FrameworkA", condition: .when(platforms: .some([.iOS]))),
+//                    .target(name: "FrameworkC", condition: .when(platforms: .some([.iOS])))
+//                ],
+//                path: "FrameworkCTargets"
+//        )
+//    ],
+//    swiftLanguageVersions: [.v5]
+//)
