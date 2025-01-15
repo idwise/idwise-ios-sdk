@@ -1,0 +1,15 @@
+{
+  "originHash" : "124d80a1bc0c839cc5c29dea84bfca8d0679a228b852be22e986b4f531a4b09c",
+  "pins" : [
+    {
+      "identity" : "fingerprintjs-pro-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fingerprintjs/fingerprintjs-pro-ios",
+      "state" : {
+        "revision" : "51df49f935af022ceafbee34855500a37e0f35d3",
+        "version" : "2.7.0"
+      }
+    }
+  ],
+  "version" : 3
+}
