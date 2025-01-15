@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "IDWiseSPM",
-            targets: ["IDWise"])
+            targets: ["IDWiseSPM","IDWise"])
     ],
     dependencies: [
             // Dependencies declare other packages that this package depends on.
