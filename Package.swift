@@ -48,5 +48,5 @@ let package = Package(
             url: "https://mobile-sdk.idwise.ai/ios/5.1.6/IDWiseSDK.xcframework.zip",
             checksum: "988aff83a10d8165cef6911c3b227040ecf87768bf90d003b8656a89532293f4"
         ),
-        .target(name: "IDWiseSDK-Dependencies", dependencies: ["FingerprintPro"], path: "IDWiseSDK-Dependencies")
+        .target(name: "IDWiseSDK-Dependencies", dependencies: ["FingerprintPro"], path: "IDWiseSDK/IDWiseSDK-Dependencies")
     ])
