@@ -30,7 +30,7 @@
 //)
 
 
-import PackageDescription
+//import PackageDescription
 
 // swift-tools-version:5.3
 import PackageDescription
@@ -51,19 +51,19 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "IDWiseSDK",
-            url: "https://mobile-sdk.idwise.ai/ios/5.1.6/IDWiseSDK.xcframework.zip",
-            checksum: "988aff83a10d8165cef6911c3b227040ecf87768bf90d003b8656a89532293f4"
-        ),
-        .binaryTarget(
             name: "FingerprintPro",
             url: "https://fpjs-public.s3.amazonaws.com/ios/\(version)/FingerprintPro-\(version)-\(checksum).xcframework.zip",
             checksum: checksum
         ),
+        .binaryTarget(
+            name: "IDWiseSDK",
+            url: "https://mobile-sdk.idwise.ai/ios/5.1.6/IDWiseSDK.xcframework.zip",
+            checksum: "988aff83a10d8165cef6911c3b227040ecf87768bf90d003b8656a89532293f4"
+        ),
         .target(name: "IDWiseSDKTargets",
                 dependencies: [
+                    .target(name: "FingerprintPro"),
                     .target(name: "IDWiseSDK"),
-                    .target(name: "FingerprintPro")
                 ],
                 path: "Sources/IDWiseSDKTargets"
                )
