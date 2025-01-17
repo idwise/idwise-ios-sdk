@@ -59,7 +59,7 @@ let package = Package(
                 .target(name: "IDWiseSDK"),
                 .product(name: "FingerprintPro", package: "fingerprintjs-pro-ios"),
             ],
-            path: "IDWiseSDKTarget" // contains an empty file
+            path: "Sources" // contains an empty file
         )
     ]
 )
