@@ -31,16 +31,17 @@
 
 
 import PackageDescription
+
 let package = Package(
-    name: "IDWiseSDK",
+    name: "IDWise",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v14)
     ],
     products: [
-        .library(name: "IDWiseSDK", targets: ["IDWiseSDK", "IDWiseSDK-Dependencies"])
+        .library(name: "IDWiseSDK", targets: ["IDWiseSDKTarget"])
     ],
     dependencies: [
-        .package(name: "FingerprintPro",url: "https://github.com/fingerprintjs/fingerprintjs-pro-ios", from: "2.7.0")
+        .package(url: "https://github.com/fingerprintjs/fingerprintjs-pro-ios", from: "2.7.0")
     ],
     targets: [
         .binaryTarget(
@@ -48,5 +49,30 @@ let package = Package(
             url: "https://mobile-sdk.idwise.ai/ios/5.1.6/IDWiseSDK.xcframework.zip",
             checksum: "988aff83a10d8165cef6911c3b227040ecf87768bf90d003b8656a89532293f4"
         ),
-        .target(name: "IDWiseSDK-Dependencies", dependencies: ["FingerprintPro"], path: "IDWiseSDK/IDWiseSDK-Dependencies")
-    ])
+        .target(
+            name: "IDWiseSDKTarget",
+            dependencies: [
+                .target(name: "IDWiseSDK"),
+                .product(name: "FingerprintPro", package: "fingerprintjs-pro-ios")
+            ])
+    ]
+)
+//let package = Package(
+//    name: "IDWiseSDK",
+//    platforms: [
+//        .iOS(.v13)
+//    ],
+//    products: [
+//        .library(name: "IDWiseSDK", targets: ["IDWiseSDK", "IDWiseSDK-Dependencies"])
+//    ],
+//    dependencies: [
+//        .package(name: "FingerprintPro",url: "https://github.com/fingerprintjs/fingerprintjs-pro-ios", from: "2.7.0")
+//    ],
+//    targets: [
+//        .binaryTarget(
+//            name: "IDWiseSDK",
+//            url: "https://mobile-sdk.idwise.ai/ios/5.1.6/IDWiseSDK.xcframework.zip",
+//            checksum: "988aff83a10d8165cef6911c3b227040ecf87768bf90d003b8656a89532293f4"
+//        ),
+//        .target(name: "IDWiseSDK-Dependencies", dependencies: ["FingerprintPro"], path: "IDWiseSDK/IDWiseSDK-Dependencies")
+//    ])
