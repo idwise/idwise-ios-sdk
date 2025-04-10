@@ -4,10 +4,10 @@
 import PackageDescription
 
 let checksumForFP = "cdceb6f13d2302bfdbf95f26d013264c678058ffbf1226034aaa0be1763d796b"
-let checksumForIDWise = "f4f81c1efab87d2e3593aca7c5b8b42498feaa8dc2219b3d9902c19948abd35d"
+let checksumForIDWise = "ef79cc88ab5957bf90cc7668a4592b0e1a178cf48301e79be6dd093a9e526ffb"
 
 let fpVersion = "2.7.0"
-let idwiseSDKVersion = "5.4.0"
+let idwiseSDKVersion = "5.4.2"
 
 let package = Package(
     name: "IDWise",
