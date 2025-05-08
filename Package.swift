@@ -3,11 +3,13 @@
 
 import PackageDescription
 
+let checksumForShield = "28ed6c3a69c62e19fc508176cc4401e6e282a941b0110dfed85b528e39e4a4c3"
 let checksumForFP = "cdceb6f13d2302bfdbf95f26d013264c678058ffbf1226034aaa0be1763d796b"
-let checksumForIDWise = "c8ac9c2ddb2016e3d7904a2b7abc188d08fd888246b569d7dd9d630807f96811"
+let checksumForIDWise = "d37e3ce419c3fefc97692848b2ff599ba8054a5b41f54e087a7557d2c55d5305"
 
+let shieldVersion = "1-5-49"
 let fpVersion = "2.7.0"
-let idwiseSDKVersion = "5.4.5"
+let idwiseSDKVersion = "5.5.0"
 
 let package = Package(
     name: "IDWise",
@@ -17,10 +19,15 @@ let package = Package(
     products: [
         .library(
             name: "IDWise",
-            targets: ["IDWise","FingerprintPro"]
+            targets: ["IDWise","ShieldFraud","FingerprintPro"]
         )
     ],
     targets: [
+        .binaryTarget(
+            name: "ShieldFraud",
+            url: "https://s3.amazonaws.com/cashshield-sdk/shield-ptr-ios-swift-\(shieldVersion).zip",
+            checksum: checksumForShield
+        ),
         .binaryTarget(
             name: "FingerprintPro",
             url: "https://fpjs-public.s3.amazonaws.com/ios/\(fpVersion)/FingerprintPro-\(fpVersion)-\(checksumForFP).xcframework.zip",
