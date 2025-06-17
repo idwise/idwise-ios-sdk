@@ -5,7 +5,7 @@ import PackageDescription
 
 let checksumForShield = "28ed6c3a69c62e19fc508176cc4401e6e282a941b0110dfed85b528e39e4a4c3"
 let checksumForFP = "cdceb6f13d2302bfdbf95f26d013264c678058ffbf1226034aaa0be1763d796b"
-let checksumForIDWise = "ce500239d518576369bdf20b25c86eb416884e7bd0e78201f62701057418608c"
+let checksumForIDWise = "d37e3ce419c3fefc97692848b2ff599ba8054a5b41f54e087a7557d2c55d5305"
 
 let shieldVersion = "1-5-49"
 let fpVersion = "2.7.0"
