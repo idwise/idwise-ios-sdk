@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let checksumForShield = "28ed6c3a69c62e19fc508176cc4401e6e282a941b0110dfed85b528e39e4a4c3"
+let checksumForShield = "a9d35093ea951d83b818715e3b9e2dae7928d1c42961c1e169d142bca57e6682"
 let checksumForFP = "cdceb6f13d2302bfdbf95f26d013264c678058ffbf1226034aaa0be1763d796b"
 let checksumForIDWise = "5821936f65e1b5236d7fb2e7ed70eb6b5de7f8f29bce53e1ddc20acea8af7e89"
 
