@@ -3,13 +3,13 @@
 
 import PackageDescription
 
-let checksumForShield = "a9d35093ea951d83b818715e3b9e2dae7928d1c42961c1e169d142bca57e6682"
+let checksumForShield = "3f80bef16ebda425b53a8e9f2e7d4a3ce9b027d8dbcccd057605acca8c3bef83"
 let checksumForFP = "cdceb6f13d2302bfdbf95f26d013264c678058ffbf1226034aaa0be1763d796b"
-let checksumForIDWise = "6b7142d3aeb3da16815893c1ce0cc87d2a530f1efe8bc58a398a9996d3027437"
+let checksumForIDWise = "71d5ea9c79663d40e10cd21e3c3259e080846ceefdec59007ca69f5a4000d319"
 
-let shieldVersion = "1-5-50"
+let shieldVersion = "1-5-52"
 let fpVersion = "2.7.0"
-let idwiseSDKVersion = "5.7.6"
+let idwiseSDKVersion = "5.7.8"
 
 let package = Package(
     name: "IDWise",
