@@ -5,11 +5,11 @@ import PackageDescription
 
 let checksumForShield = "3f80bef16ebda425b53a8e9f2e7d4a3ce9b027d8dbcccd057605acca8c3bef83"
 let checksumForFP = "bc66d7912a0a162c1082381f0f0550e3afaa3d267d805e6a2159ccc0f8f247dd"
-let checksumForIDWise = "67c7334b12e03683a410003dd9548fda770f77d2b8514c6fa2c77de87498854f"
+let checksumForIDWise = "5947af379e20b9e63f5c79942c124b779a71321ede6baed9947c92c221575155"
 
 let shieldVersion = "1-5-52"
 let fpVersion = "2.12.0"
-let idwiseSDKVersion = "6.1.6"
+let idwiseSDKVersion = "6.2.0"
 
 let package = Package(
     name: "IDWise",
