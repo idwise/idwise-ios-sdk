@@ -11,7 +11,7 @@ let checksumForIDWise = "f6304c8ca6683281c36e3fc7980f4c1299dc79f314e188ec123df20
 
 let shieldVersion = "1-5-57"
 let fpVersion = "2.13.0"
-let idwiseSDKVersion = "6.7.5"
+let idwiseSDKVersion = "6.7.6"
 
 let package = Package(
     name: "IDWise",
