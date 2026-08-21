@@ -7,11 +7,11 @@ import PackageDescription
 
 let checksumForShield = "595b5e630c5c78b0a3f740b30a0039bc3444749ae95ce5cabd9bf82f05441b31"
 let checksumForFP = "6c09a037218dc8ac10233d334de4dcdc4832fbf5f057c60ee8932d30d551190f"
-let checksumForIDWise = "8768070152bda8c803edfef71292da317a1eb631915aff802c1e8f139e9c83ce"
+let checksumForIDWise = "9fe30a98913df8d380775bf8d54920b5c10c8f9d8ae4fa61f3685b5d38ffc656"
 
 let shieldVersion = "1-5-57"
 let fpVersion = "2.13.0"
-let idwiseSDKVersion = "6.8.9"
+let idwiseSDKVersion = "6.9.0"
 
 let package = Package(
     name: "IDWise",
@@ -21,8 +21,10 @@ let package = Package(
     products: [
         .library(
             name: "IDWise",
-            targets: ["IDWise","ShieldFraud","FingerprintPro"]
-        )
+            targets: ["IDWiseTarget"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/krzyzanowskim/OpenSSL.git", exact: "3.3.1000")
     ],
     targets: [
         .binaryTarget(
@@ -36,9 +38,21 @@ let package = Package(
             checksum: checksumForFP
         ),
         .binaryTarget(
-            name: "IDWise",
+            name: "IDWiseSDK",
             url: "https://mobile-sdk.idwise.ai/ios/\(idwiseSDKVersion)/IDWiseSDK.xcframework.zip",
             checksum: checksumForIDWise
+        ),
+
+        // Wrapper Target to Link Dependencies
+        .target(
+            name: "IDWiseTarget",
+            dependencies: [
+                "IDWiseSDK",
+                "FingerprintPro",
+                "ShieldFraud",
+                .product(name: "OpenSSL", package: "OpenSSL")
+            ],
+            path: "Sources/IDWiseTarget"
         ),
     ],
     swiftLanguageVersions: [.v5]
